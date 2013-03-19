@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"back",
+				"background-color"
+			],
+			[
 				"proto",
 				"prototype"
 			],
@@ -510,25 +514,9 @@
 			[
 				"eve",
 				"eventLog"
-			],
-			[
-				"templ",
-				"template-userView"
 			]
 		]
 	},
-	"buffers":
-	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 414,
-				"line_ending": "Windows",
-				"name": "<!doctype html>"
-			}
-		}
-	],
 	"build_system": "",
 	"command_palette":
 	{
@@ -565,6 +553,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/nickf/Documents/www/tab-manager/underscore/underscore.js",
 		"/C/Users/nickf/Documents/www/tab-manager/tabs.js",
 		"/C/Users/nickf/Documents/carchipconnect/javascripts/cAlertList.js",
 		"/C/Users/nickf/Documents/carchipconnect/js2/ccc/modules/filter_area.js",
@@ -691,8 +680,7 @@
 		"/C/Users/nickf/Documents/www.weatherlink.com/MapAjax.js",
 		"/C/Users/nickf/Documents/www.weatherlink.com/images/map/get.bat",
 		"/C/Users/nickf/Documents/www/www.weatherlink.com/map.php",
-		"/C/Users/nickf/Documents/www/www.weatherlink.com/MapGlobals.js",
-		"/U/.bashrc"
+		"/C/Users/nickf/Documents/www/www.weatherlink.com/MapGlobals.js"
 	],
 	"find":
 	{
@@ -710,6 +698,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"//	",
+			"sTpl",
 			"this.",
 			"Backbone.Marionette.",
 			"}",
@@ -835,9 +825,7 @@
 			"Count",
 			"count",
 			"iAlertCount",
-			"_ensureArgs",
-			"error",
-			"iEventID"
+			"_ensureArgs"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -855,42 +843,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 414,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								210,
-								210
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<!doctype html>",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 0.0

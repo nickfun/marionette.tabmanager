@@ -34,7 +34,10 @@
 </head>
 <body>
 	<h1>Tab Manager</h1>
-	<button id="select-tab-3">Select tab three!</button>
+
+	<button id="select-contact-tab">Select contact tab!</button>
+	<button id="remove-news-tab">Remove news tab</button>
+
 	<h2>Example tabs</h2>
 	<div id="tabs-go-here"></div>
 
@@ -81,8 +84,11 @@
 		tabManager.setTemplate("[<%= order %>] <%= name %>");
 		tabManager.render('News');
 
-		$('#select-tab-3').click(function() {
+		$('#select-contact-tab').click(function() {
 			tabManager.selectTab('Contact');
+		});
+		$('#remove-news-tab').click(function() {
+			tabManager.removeTab('News');
 		});
 
 	</script>

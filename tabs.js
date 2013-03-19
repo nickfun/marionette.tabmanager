@@ -77,7 +77,6 @@ function TabManager( target ) {
 			}
 			// do nothing if we are selecting ourself
 			if( _currentTabView.cid === this.cid ) {
-				console.log('no op');
 				return;
 			}
 			// unselect old, select new

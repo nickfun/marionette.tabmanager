@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<title>Tab Manager Stuff</title>
+
+	<!-- vendor -->
+	<script src="jquery/jquery.js"></script>
+	<script src="underscore/underscore.js"></script>
+	<script src="backbone/backbone.js"></script>
+	<script src="backbone/backbone.marionette.js"></script>
+
+	<!-- my lib -->
+	<script src="tabs.js"></script>
+	<style>
+		.tab-normal { 
+			background-color: #6e6e6e;
+			color: white;
+		}
+		.tab-selected {
+			background-color: #000;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<h1>Tab Manager</h1>
+	<div id="tabs-go-here"></div>
+
+	<script>
+
+		var tabManager = new TabManager('#tabs-go-here');
+
+		var tabCallback = function( oModel, oView ) {
+			console.log("TAB CALLBACK");
+			oView.$el.toggleClass('tab-selected');
+		};
+		
+		tabManager.addTab({
+			name: 'tab one',
+			callback: tabCallback
+		});
+		tabManager.addTab({
+			name: 'tab two',
+			callback: tabCallback
+		});
+		tabManager.render();
+
+
+	</script>
+</body>
+</html>

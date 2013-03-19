@@ -108,6 +108,11 @@ function TabManager( target ) {
 		_tabs.add( oTabModel, {merge: true} );
 	};
 
+	// remove a tab
+	this.removeTab = function( sTabName ) {
+		_tabs.remove( sTabName );
+	};
+
 	// select a tab
 	this.selectTab = function( sSelectedName ) {
 		// get the model for it

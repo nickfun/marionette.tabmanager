@@ -34,6 +34,8 @@
 </head>
 <body>
 	<h1>Tab Manager</h1>
+	<button id="select-tab-3">Select tab three!</button>
+	<h2>Example tabs</h2>
 	<div id="tabs-go-here"></div>
 
 	<div id="about" class="hidden">
@@ -75,6 +77,10 @@
 			order: 3
 		});
 		tabManager.render();
+
+		$('#select-tab-3').click(function() {
+			tabManager.selectTab('Contact');
+		});
 
 	</script>
 </body>

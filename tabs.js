@@ -73,6 +73,11 @@ function TabManager( target ) {
 				_currentTabView = this;
 				return;
 			}
+			// do nothing if we are selecting ourself
+			if( _currentTabView.cid === this.cid ) {
+				console.log('no op');
+				return;
+			}
 			// unselect old, select new
 			that.unselectCallback( _currentTabView );
 			that.selectCallback( this );
@@ -99,6 +104,20 @@ function TabManager( target ) {
 	// add a tab
 	this.addTab = function( oTabModel ) {
 		_tabs.add( oTabModel, {merge: true} );
+	};
+
+	// select a tab
+	this.selectTab = function( sSelectedName ) {
+		// get the model for it
+		var oModel = _tabs.get( sSelectedName );
+		// valid?
+		if( typeof oModel === 'undefined' ) {
+			throw new Error("TabManager: cant find tab " + sSelectedName);
+		}
+		// get the view
+		var oView = AllTabs.children.findByModel( oModel );
+		// select it
+		oView.select();
 	};
 
 	// render

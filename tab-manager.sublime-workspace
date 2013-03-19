@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"sel",
+				"selectCallback"
+			],
+			[
+				"se",
+				"selectCallback"
+			],
+			[
 				"back",
 				"background-color"
 			],
@@ -506,14 +514,6 @@
 			[
 				"rend",
 				"renderBook"
-			],
-			[
-				"list-sty",
-				"list-style-type"
-			],
-			[
-				"eve",
-				"eventLog"
 			]
 		]
 	},
@@ -698,6 +698,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"selectCallback: tabCallback,",
+			"callback:",
+			"Callback",
+			"callback",
+			"apply( oView",
+			".model",
+			"wazzup",
+			"selectCallback",
+			"clicked",
+			"var",
+			"white",
+			"oTab",
+			"this",
 			"//	",
 			"sTpl",
 			"this.",
@@ -812,20 +825,7 @@
 			"Count",
 			"count",
 			"Count",
-			"count",
-			"Count",
-			"count",
-			"$",
-			"Count",
-			"count",
-			"Count",
-			"count",
-			"Count",
-			"count",
-			"Count",
-			"count",
-			"iAlertCount",
-			"_ensureArgs"
+			"count"
 		],
 		"highlight": true,
 		"in_selection": false,

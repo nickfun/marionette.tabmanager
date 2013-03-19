@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Tab Manager Stuff</title>
@@ -12,13 +12,20 @@
 	<!-- my lib -->
 	<script src="tabs.js"></script>
 	<style>
-		.tab-normal { 
-			background-color: #6e6e6e;
-			color: white;
+		._tab_manager {
+			font-size: 30px;
+			padding: 3px;
+			margin: 3px;
+			border: 1px solid blue;
 		}
-		.tab-selected {
+		.tab-normal {
 			background-color: #000;
 			color: white;
+		}
+		.tab-selected  { 
+			background-color: yellow;
+			color: black;
+			font-size: 40px;
 		}
 	</style>
 </head>
@@ -30,19 +37,36 @@
 
 		var tabManager = new TabManager('#tabs-go-here');
 
-		var tabCallback = function( oModel, oView ) {
-			console.log("TAB CALLBACK");
-			oView.$el.toggleClass('tab-selected');
+		var tabCallback = function() {
+			console.log("thanks for clicking on", this.model.id);
 		};
+
+		var untabCallback = function() {
+			console.log("time to clean up ", this.model.id);
+		}
 		
 		tabManager.addTab({
 			name: 'tab one',
-			callback: tabCallback
+			selectCallback: tabCallback,
+			unselectCallback: untabCallback,
+			order: 3
 		});
 		tabManager.addTab({
 			name: 'tab two',
-			callback: tabCallback
+			selectCallback: tabCallback,
+			unselectCallback: untabCallback,
+			order: 1
 		});
+
+		tabManager.addTab({
+			name: 'NICK IS COOL',
+			selectCallback: tabCallback,
+			unselectCallback: untabCallback,
+			//className: 'tab-nick',
+			//selectedClassName: 'tab-nick-selected',
+			order: 2
+		});
+
 		tabManager.render();
 
 

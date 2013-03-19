@@ -13,7 +13,7 @@
  * - tagName: the HTML tag that the tab should render as. defaults to span
  * - className / selectedClassName: the default & selected HTML class to be
  *
- * @author Nicholas Funnell <nickf@davisnet.com>
+ * @author Nickf
  * @since 2013-03-18
  */
 function TabManager( target ) {

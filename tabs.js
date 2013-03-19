@@ -109,6 +109,15 @@ function TabManager( target ) {
 
 	// remove a tab
 	this.removeTab = function( sTabName ) {
+		// get the model
+		var oModel = _tabs.get( sTabName );
+		// is it the selected on?
+		if( _currentTabView.model.id == oModel.id ) {
+			// unselect it
+			this.unselectCallback( AllTabs.children.findByModel(oModel) );
+			// select nothing
+			_currentTabView = false;
+		}
 		_tabs.remove( sTabName );
 	};
 

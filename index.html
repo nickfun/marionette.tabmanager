@@ -58,6 +58,7 @@
 			selector = selector.toLowerCase();
 			$(selector).toggleClass('hidden');
 		};
+
 		tabManager.addTab({
 			name: 'About',
 			selectCallback: tabCallback,
@@ -76,7 +77,9 @@
 			unselectCallback: tabCallback,
 			order: 3
 		});
-		tabManager.render();
+
+		tabManager.setTemplate("[<%= order %>] <%= name %>");
+		tabManager.render('News');
 
 		$('#select-tab-3').click(function() {
 			tabManager.selectTab('Contact');

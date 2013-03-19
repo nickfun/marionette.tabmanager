@@ -698,6 +698,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"_tabTemplate",
 			"name",
 			"untabCallback",
 			"selectCallback: tabCallback,",
@@ -824,8 +825,7 @@
 			"_getDriversBy",
 			"debug",
 			"count",
-			"Count",
-			"count"
+			"Count"
 		],
 		"highlight": true,
 		"in_selection": false,

@@ -54,7 +54,9 @@ function TabManager( target ) {
 		tagName: function() {
 			return this.model.get('tagName');
 		},
-		template: _tabTemplate,
+		getTemplate: function() {
+			return _tabTemplate;
+		},
 		attributes: function() {
 			return { 'data-tabViewCid': this.cid };
 		},

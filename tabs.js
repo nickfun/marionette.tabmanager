@@ -13,10 +13,14 @@
  * - tagName: the HTML tag that the tab should render as. defaults to span
  * - className / selectedClassName: the default & selected HTML class to be
  *
- * @author Nickf
+ * @author http://github.com/nickfun
  * @since 2013-03-18
  */
 function TabManager( target ) {
+
+    // Private Functions, Properties
+    // -----------------------------
+    
 	var _tabTemplate = _.template('<%= name %>');
 	var that = this;
 
@@ -112,7 +116,7 @@ function TabManager( target ) {
 		// get the model
 		var oModel = _tabs.get( sTabName );
 		// is it the selected on?
-		if( _currentTabView.model.id == oModel.id ) {
+		if( _currentTabView !== false &&  _currentTabView.model.id == oModel.id ) {
 			// unselect it
 			this.unselectCallback( AllTabs.children.findByModel(oModel) );
 			// select nothing

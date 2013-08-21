@@ -55,35 +55,42 @@
 	</div>
 	<script>
 
+		// instance of our tab manager
 		var tabManager = new TabManager('#tabs-go-here');
-		var tabCallback = function() {
+
+		// define a function to be called when a tab is selected or un-selected
+		function fnTabCallback() {
 			var selector = '#' + this.model.id;
 			selector = selector.toLowerCase();
 			$(selector).toggleClass('hidden');
-		};
+		}
 
+		// Add some tabs
 		tabManager.addTab({
-			name: 'About',
-			selectCallback: tabCallback,
-			unselectCallback: tabCallback,
+			id: 'About',
+			selectCallback: fnTabCallback,
+			unselectCallback: fnTabCallback,
 			order: 1
 		});
 		tabManager.addTab({
-			name: 'News',
-			selectCallback: tabCallback,
-			unselectCallback: tabCallback,
+			id: 'News',
+			selectCallback: fnTabCallback,
+			unselectCallback: fnTabCallback,
 			order: 2
 		});
 		tabManager.addTab({
-			name: 'Contact',
-			selectCallback: tabCallback,
-			unselectCallback: tabCallback,
+			id: 'Contact',
+			selectCallback: fnTabCallback,
+			unselectCallback: fnTabCallback,
 			order: 3
 		});
 
-		tabManager.setTemplate("[<%= order %>] <%= name %>");
+		// set a template to control how our tabs should be displayed
+		tabManager.setTemplate("[<%= order %>] <%= id %>");
+		// startup the tab manager and have 'News' be selected by default
 		tabManager.render('News');
 
+		// callbacks for some buttons on the page
 		$('#select-contact-tab').click(function() {
 			tabManager.selectTab('Contact');
 		});

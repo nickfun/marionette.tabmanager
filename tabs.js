@@ -2,8 +2,8 @@
  * Tab Manager Class
  *
  * Usage:	var tm = new TabManager('#tabs-go-here-in-html');
- *			tm.addTab( {name: 'tab 1'}); 
- *			tm.addTab( {name: 'tab 2'});
+ *			tm.addTab( {id: 'tab 1'}); 
+ *			tm.addTab( {id: 'tab 2'});
  *			tm.render('tab 1');
  *
  * Other things to pass in for options:
@@ -21,18 +21,18 @@ function TabManager( target ) {
     // Private Functions, Properties
     // -----------------------------
     
-	var _tabTemplate = _.template('<%= name %>');
+	var _tabTemplate = _.template('<%= id %>');
 	var that = this;
 
 	var TabModel = Backbone.Model.extend({
 		defaults: {
-			name: '_tab',
+			id: '_tab',
 			order: 1,
 			tagName: 'span',
 			className: '_tab_manager tab-normal',
 			selectedClassName: '_tab_manager tab-selected'
 		},
-		idAttribute: 'name'
+		idAttribute: 'id'
 	});
 
 	// collection of tabs to display
